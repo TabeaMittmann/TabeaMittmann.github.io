@@ -1,0 +1,10 @@
+_site
+.sass-cache
+node_modules
+.DS_Store
+.jekyll-cache
+.jekyll-metadata
+.env
+
+# Private source material (contains phone/address/DOB — not for the public repo)
+data/
