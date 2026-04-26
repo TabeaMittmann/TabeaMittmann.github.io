@@ -18,10 +18,10 @@
   <div class="page">
 
     <aside class="sidebar">
-      <h1 class="side-name">Tabea<br><span class="middle">C.</span> Mittmann</h1>
+      <h1 class="side-name">Tabea <span class="middle">C.</span> Mittmann</h1>
       <p class="side-role">
         Curriculum Vitae<br>
-        <em>Updated April 2026</em>
+        <em>Updated <span id="last-updated">…</span></em>
       </p>
 
       <nav class="side-nav">
@@ -39,6 +39,7 @@
       <div class="side-meta">
         <span class="row"><a href="mailto:t.mittmann@uni-muenster.de">t.mittmann@uni-muenster.de</a></span>
         <span class="row"><a href="https://www.linkedin.com/in/tabea-mittmann" target="_blank" rel="noopener">LinkedIn</a></span>
+        <span class="row"><a href="https://orcid.org/0009-0009-7567-6252" target="_blank" rel="noopener">ORCID</a></span>
         <span class="row">Münster, DE</span>
       </div>
 
@@ -256,6 +257,16 @@
 
   <script>
     document.getElementById('year').textContent = '© ' + new Date().getFullYear() + '  ·  Münster';
+
+    // "Updated <month year>" pulled from this file's last modified time
+    // (GitHub Pages serves Last-Modified headers from the commit time, so it
+    // automatically reflects the deploy date without manual bumping).
+    (function () {
+      const el = document.getElementById('last-updated');
+      if (!el) return;
+      const d = new Date(document.lastModified);
+      el.textContent = isNaN(d) ? '' : d.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+    })();
 
     document.querySelectorAll('a[href^="#"]').forEach(a => {
       a.addEventListener('click', e => {
