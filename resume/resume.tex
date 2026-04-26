@@ -1,0 +1,152 @@
+%-------------------------
+% Tabea C. Mittmann — 1-page Resume
+% Companion to cv.tex; same content, condensed for general use.
+% Build: `make resume` -> ../docs/Tabea-Mittmann-Resume.pdf
+%-------------------------
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{xcolor}
+\input{glyphtounicode}
+
+% margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.6in}
+\addtolength{\textwidth}{1.2in}
+\addtolength{\topmargin}{-0.6in}
+\addtolength{\textheight}{1.2in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-6pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+%-------------------------
+\newcommand{\me}{\textbf{T.~C.~Mittmann}}
+\newcommand{\etal}{\textit{et~al}}
+
+\newcommand{\resumeItem}[1]{\item\small{#1 \vspace{-3pt}}}
+
+\newcommand{\rHeading}[4]{%
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\sectionList}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\sectionListEnd}{\end{itemize}\vspace{-4pt}}
+\newcommand{\bullets}{\begin{itemize}[itemsep=-1pt, topsep=2pt]}
+\newcommand{\bulletsEnd}{\end{itemize}\vspace{-6pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+%======================================
+\begin{document}
+
+%-------------------------
+% Header
+%-------------------------
+\begin{center}
+    {\LARGE \scshape Tabea C. Mittmann} \\ \vspace{2pt}
+    \small
+    Münster, Germany \;|\;
+    \href{mailto:t.mittmann@uni-muenster.de}{t.mittmann@uni-muenster.de} \;|\;
+    \href{https://www.linkedin.com/in/tabea-mittmann}{LinkedIn}
+\end{center}
+
+\vspace{-6pt}
+\noindent\small
+MD candidate at the University of Münster with a strong interest in translational research at the intersection of cancer biology, molecular medicine, and clinical care. Wet-lab experience in CRISPRi functional screens and RNA biology from a research stay at UCSF.
+\normalsize
+
+%-------------------------
+% Education
+%-------------------------
+\section{Education}
+\sectionList
+
+  \rHeading
+    {Westfälische Wilhelms-Universität Münster --- Doctor of Medicine (MD)}{Apr 2019 -- May 2027}
+    {State Exam M1 (2021) and M2 (2025): grade \textbf{1}, top 1\%. USMLE Step~1: Pass (2024); Step~2 CK: \textbf{273}.}{Münster, Germany}
+
+\sectionListEnd
+
+%-------------------------
+% Research Experience
+%-------------------------
+\section{Research Experience}
+\sectionList
+
+  \rHeading
+    {University of California, San Francisco --- Visiting Student Researcher}{Apr 2022 -- Sep 2023}
+    {Goodarzi Lab --- RNA-binding proteins in breast cancer metastasis (Boehringer Ingelheim Fonds MD fellowship)}{San Francisco, CA, USA}
+    \bullets
+      \resumeItem{Designed and executed multiple CRISPRi functional screens to investigate the role of RNA-binding proteins (RBPs) in breast cancer progression and metastasis.}
+      \resumeItem{Applied molecular biology techniques: cell culture, molecular cloning, PCR, single-cell RNA-seq, and RNA-seq library preparation.}
+      \resumeItem{Contributed to translational cancer research at the intersection of RNA biology and disease mechanisms; co-authored the resulting paper in \textit{Science Advances} (2026).}
+    \bulletsEnd
+
+\sectionListEnd
+
+%-------------------------
+% Selected Publications
+%-------------------------
+\section{Publications}
+\small
+\noindent
+Karner~H., \me, \etal\ \textbf{Integrative analysis of mRNA stability regulation uncovers a metastasis-suppressive program in breast cancer.} \textit{Science Advances} \textbf{12}, eaea9061 (2026). \href{https://doi.org/10.1126/sciadv.aea9061}{doi:10.1126/sciadv.aea9061} \\[2pt]
+Khoroshkin~M., \ldots, \me, \etal\ \textbf{A generative framework for enhanced cell-type specificity in rationally designed mRNAs.} \textit{bioRxiv} (2024). \href{https://doi.org/10.1101/2024.12.31.630783}{doi:10.1101/2024.12.31.630783}
+\normalsize
+
+%-------------------------
+% Fellowships & Honors
+%-------------------------
+\section{Fellowships \& Honors}
+\small
+\noindent
+\textbf{Studienstiftung des Deutschen Volkes} (German National Academic Foundation), three-year fellowship --- 2023--2026 \;|\;
+\textbf{Boehringer Ingelheim Fonds MD Fellowship} (17 months) --- 2022--2023 \;|\;
+\textbf{First} (2021) \& \textbf{Second} (2025) \textbf{State Exam in Medicine} --- grade 1, top 1\%.
+\normalsize
+
+%-------------------------
+% Teaching
+%-------------------------
+\section{Teaching}
+\small
+\noindent
+\textbf{Biochemistry Laboratory Course Tutor} (2021) \;|\;
+\textbf{Anatomy \& Imaging Course Tutor} (2020, 2022) \;|\;
+\textbf{MeDocs --- IT Support for Lecturers} (2020--2021), University of Münster.
+\normalsize
+
+%-------------------------
+% Skills
+%-------------------------
+\section{Skills}
+\small
+\noindent
+\textbf{Wet lab:} mammalian cell culture, molecular cloning, PCR, CRISPRi functional screens, lentiviral vector handling, single-cell RNA-seq, RNA-seq library preparation. \\[2pt]
+\textbf{Topics:} cancer biology, molecular biology, translational research, RNA biology, breast cancer metastasis, mRNA stability. \\[2pt]
+\textbf{Clinical:} University of Münster MD curriculum (preclinical + clinical); final-year clinical rotations (Praktisches Jahr); USMLE Step~1 and Step~2 CK passed. \\[2pt]
+\textbf{Languages:} German (native), English (fluent --- TOEFL 115), French (fluent --- DELF B2).
+\normalsize
+
+\end{document}
