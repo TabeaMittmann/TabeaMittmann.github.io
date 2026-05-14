@@ -8,8 +8,9 @@ Personal site for Tabea C. Mittmann (MD candidate, University of Münster). Stat
 - `cv/index.html` — formal CV page (single-page scroll: summary, education, research, publications, honors, teaching, skills, languages)
 - `styles.css` — all site styles, shared across both pages
 - `data/` — source material from the user (CV PDF, LinkedIn export). Not deployed.
-- `resume/` — separate LaTeX project building two PDFs:
+- `resume/` — separate LaTeX project building three PDFs:
   - `cv.tex` + `publications.tex` → `docs/Tabea-Mittmann-CV.pdf` (2 pages)
+  - `cv-photo.tex` + `publications.tex` + `photo.jpg` → `docs/Tabea-Mittmann-CV-Photo.pdf` (Lebenslauf-style variant with headshot in the header)
   - `resume.tex` → `docs/Tabea-Mittmann-Resume.pdf` (1 page)
 - `docs/` — built PDFs (committed; linked from `cv/index.html`).
 
@@ -37,7 +38,7 @@ Editorial / book-frontmatter aesthetic. Two-column layout: sticky sidebar with t
 - The publications list lives in three places that must stay in sync:
   - `index.html` (Publications section)
   - `cv/index.html` (Publications section)
-  - `resume/publications.tex` (used by both `cv.tex` and the inline list in `resume.tex`)
+  - `resume/publications.tex` (shared by `cv.tex` and `cv-photo.tex`; `resume.tex` keeps its own inline list)
 - After changing `resume/*.tex` or `resume/publications.tex`, rebuild PDFs:
   ```bash
   cd resume && make
